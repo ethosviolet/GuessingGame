@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<body>
+<script>
+let randomNumber;
+let guess;
+let guesses;
+
+while (true) {
+randomNumber = Math.floor(Math.random() * 10) + 1;
+guesses = 0; 
+while (true) {
+    guess = parseInt(prompt("Guess a number between 1 and 10."));
+    guesses++;
+if (guess === randomNumber) {
+   alert(`You guessed it in ${guesses} guesses!`); break;
+ } 
+ else if (guess < randomNumber) {
+     alert("Your guess was too low, guess again.");
+} 
+else {
+alert("Your guess was too high, guess again.");
+}
+}
+}
+</script>
+</body>
+</html>
